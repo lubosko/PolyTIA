@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #58a6ff44;
+}
+
+/* Code font */
+.font-mono, pre, code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+/* Skill toggle animation */
+.skill-toggle {
+  transition: background-color 0.15s ease;
+}
+
+/* Chat message fade-in */
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.msg-in {
+  animation: msgIn 0.18s ease forwards;
+}
+
+/* Blinking cursor during stream */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink::after {
+  content: '▋';
+  animation: blink 0.8s step-start infinite;
+  color: #58a6ff;
+  margin-left: 1px;
+}
+
+/* Syntax color classes for code output */
+.tok-keyword  { color: #ff7b72; }
+.tok-string   { color: #a5d6ff; }
+.tok-comment  { color: #8b949e; font-style: italic; }
+.tok-number   { color: #79c0ff; }
+.tok-type     { color: #ffa657; }

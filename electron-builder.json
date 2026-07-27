@@ -1,0 +1,47 @@
+{
+  "appId": "com.schaeffler.polytia",
+  "productName": "PolyTIA",
+  "copyright": "Schaeffler Technologies AG & Co. KG",
+  "directories": {
+    "output": "D:\\PolyTIA",
+    "buildResources": "public"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "public/icon.png",
+    "public/splash.png",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "docs/RUN_MANUAL.md",
+      "to": "docs/RUN_MANUAL.md"
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/icon.png",
+    "forceCodeSigning": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "PolyTIA"
+  },
+  "portable": {
+    "artifactName": "PolyTIA-portable-${version}.exe"
+  }
+}

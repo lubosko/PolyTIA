@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dis/
+
+# RESTRICTED — Schaeffler-internal skills, never publish
+restricted-standards/
+
+# CONFIDENTIAL — customer project packs / structure docs, never publish
+project-skills/
+
+# RESTRICTED source docs — Schaeffler standard/styleguide PDFs, never publish
+TIA_V17_StyleGuide_EN.pdf
+TIA_V17_SoftwareDescription_EN.pdf
+**/TIA_V17_StyleGuide_EN.pdf
+**/TIA_V17_SoftwareDescription_EN.pdf
+
+# CONFIDENTIAL — customer project PDF + Schaeffler compliance prototype, never publish
+docs/M-10631571AA-SK.pdf
+SchaefflerComplianceAdvisor.html
+
+# C# bridge build artifacts
+bridge/**/bin/
+bridge/**/obj/
+bridge/**/.vs/
+
+# Logs / temp
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
